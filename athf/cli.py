@@ -150,6 +150,12 @@ def thrunt() -> None:
 
 def main() -> None:
     """Main entry point for the CLI."""
+    # ADEF v0.1.x dual-registration signal. Detect-vault's ``detect`` callback
+    # reads this env var to decide whether to print its deprecation banner —
+    # the banner only fires under ``athf detect``, never under ``adef detect``.
+    # Removed in athf v-next when ``athf detect`` is dropped.
+    import os
+    os.environ["ATHF_INVOKED"] = "1"
     cli()
 
 
