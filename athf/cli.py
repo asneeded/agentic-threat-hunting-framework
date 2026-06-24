@@ -13,6 +13,7 @@ from athf.__version__ import __version__  # noqa: E402
 from athf.commands import attack, context, env, hunt, init, investigate, research, similar, splunk  # noqa: E402
 from athf.commands.agent import agent  # noqa: E402
 from athf.commands.mcp import mcp  # noqa: E402
+from athf.commands.metrics import metrics  # noqa: E402
 from athf.plugin_system import PluginRegistry  # noqa: E402
 
 console = Console()
@@ -100,6 +101,9 @@ cli.add_command(agent)
 
 # MCP server command
 cli.add_command(mcp)
+
+# Metrics commands
+cli.add_command(metrics)
 
 # Integration commands (optional, requires additional dependencies)
 if splunk is not None:
