@@ -52,10 +52,10 @@ This file captures the technical environment context that informs threat hunting
 
 ### EDR / Endpoint Security
 
-- **Product:** [To be configured - e.g., CrowdStrike Falcon, Microsoft Defender, Carbon Black]
+- **Product:** Palo Alto Networks Cortex XDR
 - **Version:** [To be configured]
 - **Deployment:** [To be configured - % of endpoints covered, OS types]
-- **Telemetry:** Process execution, network connections, file events, registry modifications
+- **Telemetry:** Process execution, network connections, file events, registry modifications. Queried via XQL (XDR Query Language) against the `xdr_data` dataset.
 - **API Access:** [To be configured]
 - **Documentation:** [To be configured]
 
